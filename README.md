@@ -13,7 +13,7 @@
 - [KMP](#KMP)
 - [Two_Pointer](#Two_Pointer)
 - [CCW](#CCW)
-- [SSC](#SSC)
+- [SCC](#SCC)
 
 #
 
@@ -100,11 +100,11 @@
 
 # 
 
-## SSC
+## SCC
 2020년 3월 31일 화요일
 
 - 시간복잡도 : O(V + E)
 - 스패닝 트리를 구한다음 사이클이있는 것들끼리 부분집합(SCC)을 만듬
 - 코사리주 알고리즘과 타잔 알고리즘으로 구현 가능함
-- [SSC.md](./SSC.md)
+- [SCC.md](./SCC.md)
  
