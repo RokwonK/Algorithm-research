@@ -13,6 +13,7 @@
 - [KMP](#KMP)
 - [Two_Pointer](#Two_Pointer)
 - [CCW](#CCW)
+- [SSC](#SSC)
 
 #
 
