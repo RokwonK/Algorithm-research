@@ -186,7 +186,7 @@ so, 그 사이클 중에서 가장 작은 정점 번호(root에 가깝게)로 SC
 #define MAX_V 10000
 using namespace std;
 
-int v, e, , x, y, r, c;
+int v, e, r, c;
 
 // 자신과 이어지는 가장 끝 정점
 int discover[10001];
@@ -208,7 +208,7 @@ int dfs(int here) {
     st.push(here);
 
     // 사이클이 하나도 발생안하면 마지막 리프 노드에서는 for문에 들어가지 않으니 각각의 정점이 하나의 SCC가 될거임
-    for (int there : vt[here]) {
+    for (int there : arr[here]) {
         //처음 정점을 방문하였다 => 정점에 값을 넣고 자식으로 넘어감
         if (discover[there] == -1)
             ret = min(ret, dfs(there));
@@ -238,24 +238,27 @@ int dfs(int here) {
     return ret;
 }
 int main() {
-    scanf("%d%d", &v, &e);
-    vt.resize(v + 1);
+    cin >> v >> e;
     for (int i = 0; i < e; i++) {
-        scanf("%d%d", &x, &y);
-        vt[x].push_back(y);
+        int x, y;
+        cin >> x >> y;
+        arr[x].push_back(y);
     }
     memset(discover, -1, sizeof(discover));
     memset(scc, -1, sizeof(scc));
+
     for (int i = 1; i <= v; i++) {
         if (discover[i] == -1)
             dfs(i);
     }
-    sort(res.begin(), res.end(), cmp);
-    printf("%d\n", r);
+    sort(res, res+r, cmp);
+
+    cout << r << '\n';
+
     for (int i = 0; i < r; i++) {
-        for (auto h : res[i]) 
-            printf("%d ", h);
-        printf("-1\n");
+        for (int a : res[i]) 
+            cout << a << ' ';
+        cout << -1 << '\n';
     }
     return 0;
 }
