@@ -137,12 +137,128 @@ int main(void) {
         cout << -1 << '\n';
     }
     
-    
     return 0;
 }
-
 ```
 
+<br/>
+<br/>
 
+
+## 타잔 알고리즘
+
+DFS를 수행할 때 생성되는 DFS 트리의 간선의 정보를 이용하여 ALL DFS 한번으로 모든 SCC를 구하는 것  
+`시간 복잡도 = O(V + E)` 지만 DFS 한 번만에 끝내고 역방향 그래프를 저장할 필요가 없음  
+대신에 정점값을 저장하는 배열 1개가 필요함(간선의 개수에 따라 공간복잡도는 차이남)  
+BUT, 시간적으로 코사리주 알고리즘보다 좋음
+
+- DFS의 호출 순서에 따라 정점을 stack에 push함  
+(한 정점의 스택 위에 있는 값들은 스패닝 트리 기준으로 자식들임)  
+자식들의 자식으로 DFS로 넘어가면서 리프노드에서 값을 가지고 
+
+- 맨처음 discover 값은 자신의 정점 번호임(DFS 맨 처음 들르는 것 기준으로 번호를 매겨줌)  
+(사이클 즉, discover 값이 있는 곳으로 돌아 왔을때 하나의 SCC가 될 수 있는 것임)  
+
+- 하지만 하나의 SCC안에 사이클이 하나만 존재하라는 법은 없음  
+so, 그 사이클 중에서 가장 작은 정점 번호(root에 가깝게)로 SCC를 만들어야 하나의 독립적인 큰SCC가 완성됨  
+
+- so, discover 값이 존재하면서 SCC가 아닌 곳에 왔다면  
+(사이클이 있어서 discover가 존재하는 곳에 다시 왔다는 것임) 그 discover 값을 리턴시킴
+
+- 리턴 받은 정점에서는 자신의 discover값과 리턴 받은 값을 비교하여 더 작은 값을 변수에 저장함
+
+- discover값과 리턴 값이 같다면 더 이상의 사이클은 없다는 것!(사이클 없는 리프노드일 경우도 갈 곳이 없으니 두 값이 같음)
+
+- 그 값의 스택 위(그 값의 자식들)은 모두 같은 사이클 안에 있다는 뜻이니 하나의 pop시키며 SCC로 만듬
+
+`위상 정렬`을 이용한 방법 Why?  
+- 순서도 있게 차례대로 감
+- 순서도에 문제가 있다 => 싸이클이 생김 => 어떻게 아는가? (discover값은 존재하는데 SCC가 아니다)일때
+- 싸이클의 첫 루트를 찾음(return값으로 받음)
+- return 받은 값과 discover값이 같으면 그 정점까지 사이클이 있다는 것
+- 즉 스택에서 그 정점위에 것들은 자신의 자식들이고 그 자식들이 사이클을 만들었다는 것이므로 하나의 SCC를 만들었다는 것
+
+```cpp
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <stack>
+#define MAX_V 10000
+using namespace std;
+
+int v, e, , x, y, r, c;
+
+// 자신과 이어지는 가장 끝 정점
+int discover[10001];
+// 이 정점이 scc에 들어가 있는가
+int scc[10001];
+// 방향을 집어넣음
+vector<int> arr[10001];
+
+
+vector<int> res[10001];
+stack<int> st;
+
+bool cmp(vector<int>& a, vector<int>& b) {
+    return a[0] < b[0];
+}
+int dfs(int here) {
+    discover[here] = c++;
+    int ret = discover[here];
+    st.push(here);
+
+    // 사이클이 하나도 발생안하면 마지막 리프 노드에서는 for문에 들어가지 않으니 각각의 정점이 하나의 SCC가 될거임
+    for (int there : vt[here]) {
+        //처음 정점을 방문하였다 => 정점에 값을 넣고 자식으로 넘어감
+        if (discover[there] == -1)
+            ret = min(ret, dfs(there));
+
+        // 정점을 방문하였는데 다시방문했다? 그런데 SCC도 아니다? 그럼 사이클 발생했다는 뜻
+        // 그 곳의 값(discover와 return값 중 작은 값)을 가져와 ret에 넣음
+        else if (scc[there] == -1)
+            ret = min(ret, discover[there]);
+    }
+
+    // discover값과 ret값이 같다는 스택에서 그 정점위에는 전부 사이클이 있음 -> 하나의 SCC
+
+    // 사이클이 없으면 맨처음 ret에 discover값을 넣었으므로 같음
+    // 그렇다면 스택에서도 이 정점이 가장 위일 거임 그 정점 하나가 SCC가 됨
+    if (ret == discover[here]) {
+        int t;
+        while (t == here) {
+            t = st.top();
+            st.pop();
+
+            scc[t] = r;
+            res[r].push_back(t);
+        }
+        sort(res[r].begin(), res[r].end());
+        r++;
+    }
+    return ret;
+}
+int main() {
+    scanf("%d%d", &v, &e);
+    vt.resize(v + 1);
+    for (int i = 0; i < e; i++) {
+        scanf("%d%d", &x, &y);
+        vt[x].push_back(y);
+    }
+    memset(discover, -1, sizeof(discover));
+    memset(scc, -1, sizeof(scc));
+    for (int i = 1; i <= v; i++) {
+        if (discover[i] == -1)
+            dfs(i);
+    }
+    sort(res.begin(), res.end(), cmp);
+    printf("%d\n", r);
+    for (int i = 0; i < r; i++) {
+        for (auto h : res[i]) 
+            printf("%d ", h);
+        printf("-1\n");
+    }
+    return 0;
+}
+```
 
 
