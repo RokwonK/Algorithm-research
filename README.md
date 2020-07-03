@@ -48,11 +48,12 @@
 #
 
 ## Dynamic Programming
-2020년 3월 2일 월요일
+2020년 3월 2일 월요일  
+
+*수정 - 20/07/03*
 
 - 시간복잡도 => 가지각색
-- 작은 문제부터 풀어 작은문제를 이용해 큰문제를 푸는 방식
-- Top-down / Bottom-up 방식 => **Bottom-up 방식** 중요
+- Top-down / Bottom-up 방식
 - 쉽게 보이면서도 활용하기에 가장 어려운 매력적인 알고리즘
 - [Dynamic_Programming.md](./Dynamic_Programming.md)
 
