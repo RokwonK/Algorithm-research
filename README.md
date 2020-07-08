@@ -12,11 +12,11 @@
 - [BitMask](#BitMask)
 - [KMP](#KMP)
 - [Two_Pointer](#Two_Pointer)
-- [CCW](#CCW)
 - [SCC](#SCC)
 - [LCA](#LCA)
 - [Bitonic tour](#Bitonic_tour)
 - [Trie](#Trie)
+- [CCW](#CCW)
 
 # 
 
@@ -94,16 +94,6 @@
 
 #  
 
-## CCW
-2020년 3월 26일 목요일
-
-- 기하학 기술
-- 두 벡터의 방향성을 이용하여 여러 기하학 풀이에 사용
-- 어디로 꺽이는지 세 점이 어떤 위치에 있는지 알 수 있음
-- [CounterClockWise.md](./CounterClockWise.md)
-
-# 
-
 ## SCC
 2020년 3월 31일 화요일 - 코사리주 알고리즘  
 2020년 4월 1일 수요일 - 타잔 알고리즘
@@ -145,3 +135,13 @@
 - 문자열을 찾는 알고리즘 중 하나 (ex. 제한된 사전 안에서 문자열 찾기)
 - 메모리를 많이 사용하여 시간적 효율성을 가진다.
 - [Trie.md](./Trie.md)
+
+# 
+
+## CCW
+2020년 7월 8일 화요일
+
+- 기하학 기술
+- 두 벡터의 방향성을 이용하여 여러 기하학 풀이에 사용
+- 방향 관계를 구할 수 있음
+- [CounterClockWise.md](./CounterClockWise.md)
