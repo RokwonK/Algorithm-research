@@ -3,6 +3,8 @@
 각 알고리즘마다 내가 부족한 부분들 정리해 놓음  
 취약한 부분을 다시 보고 바로 깨달을 수 있게...
 
+명심! 흐른 시간은 돌아오지 않는다! 후회할 여지를 남기지 말자
+
 ## 목차
 
 - [SPFA](#SPFA)
@@ -17,6 +19,7 @@
 - [Bitonic tour](#Bitonic_tour)
 - [Trie](#Trie)
 - [CCW](#CCW)
+- [Convex_Hull](#Convex_Hull)
 
 # 
 
@@ -145,3 +148,33 @@
 - 두 벡터의 방향성을 이용하여 여러 기하학 풀이에 사용
 - 방향 관계를 구할 수 있음
 - [CounterClockWise.md](./CounterClockWise.md)
+
+# 
+
+## Convex_Hull
+2020년 7월 9일 목요일
+
+- 시간 복잡도 : O(NlogN)
+- CCW를 이용하여 최외각 점들을 모아 볼록다각형을 만드는 기술
+- [Convex_Hull](./Convex_Hull.md)
+
+
+이후...  
+- segment, 펜윅, lazy propagation
+- 네트워크 플로우
+- 이분 매칭
+- 조합론 등 수학
+- LCA 
+- 고속 퓨리에 변환, 중국인의 나머지 정리, 모듈러 연산
+- MCMF
+- SCC, Biconnected Component
+- 라빈카프
+- 아호 코라식
+- 병렬 이분 탐색
+- 머지소트 트리
+- 컨백스 헐 트릭
+- 카라츠바 알고리즘
+- 허프만 코딩
+- 고속 역 제곱근 알고리즘
+- 브레젠험 라인 알고리즘
+
