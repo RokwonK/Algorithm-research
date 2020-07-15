@@ -20,6 +20,7 @@
 - [Trie](#Trie)
 - [CCW](#CCW)
 - [Convex_Hull](#Convex_Hull)
+- [MCMF](#MCMF)
 
 # 
 
@@ -158,6 +159,16 @@
 - CCW를 이용하여 최외각 점들을 모아 볼록다각형을 만드는 기술
 - [Convex_Hull](./Convex_Hull.md)
 
+# 
+
+## MCMF
+2020년 7월 15일 수요일
+
+- 시간 복잡도 : O( (V+E)*f )
+- 최대유량이 흐를때 최소비용을 구하는 것
+- 각 유량마다 최소비용을 구할때 SPFA를 사용해 시간적 효율성을 얻음
+- [MCMF](./MCMF.md)
+
 
 이후...  
 - segment, 펜윅, lazy propagation
@@ -166,7 +177,6 @@
 - 조합론 등 수학
 - LCA 
 - 고속 퓨리에 변환, 중국인의 나머지 정리, 모듈러 연산
-- MCMF
 - SCC, Biconnected Component
 - 라빈카프
 - 아호 코라식
