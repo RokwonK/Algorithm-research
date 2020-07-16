@@ -7,9 +7,24 @@
 
 ## 목차
 
-- [SPFA](#SPFA)
+### 아직 정리x
+- [Union_Find]()
+- [Minimum_Spanning_Tree]()
+- [Greedy]()
+- [Topological_Sort]()
+- [DFS_BFS]()
+- [Indexed tree(Segment, 펜윅), lazy propagation]()
+- [Bipartite Matching(이분매칭)]()
+- [Biconnected Component]()
+- [LCA]() 
+
+</hr>
+
+### 정리O
+
+- [Shortest_Path](#Shortest_Path)
 - [Sweeping](#Sweeping)
-- [Parameric](#Parameric)
+- [Parametric](#Parametric)
 - [Dynamic Programming](#Dynamic-Programming)
 - [BitMask](#BitMask)
 - [KMP](#KMP)
@@ -23,17 +38,38 @@
 - [Network_Flow](#Network_Flow)
 - [MCMF](#MCMF)
 
+
+### 공부해야할 것들
+- 아호 코라식
+- 라빈카프
+- 디닉 알고리즘
+- 조합론 등 수학
+- 고속 퓨리에 변환, 중국인의 나머지 정리, 모듈러 연산
+- 병렬 이분 탐색
+- 카라츠바 알고리즘
+- 머지소트 트리
+- 컨백스 헐 트릭
+- Splay tree
+- 허프만 코딩
+- 고속 역 제곱근 알고리즘
+- 브레젠험 라인 알고리즘
+- etc...
+
 # 
 
-## SPFA
+## Shortest_Path
 2020년 2월 23일 일요일
 
-- 시간복잡도 => 평균 : O(E+V) / 최악 : O(EV)
+- SPFA, Dijkstra, Bellman-Ford
+- SPFA : 평균 : O(E+V) / 최악 : O(EV)
+- Dijkstra : O(Elogv)
+- Bellman-Ford : O(EV)
+- Floyd-Warshall : O(V^3) (예정)
 - 최단거리 알고리즘(벨만포드 알고리즘을 개선)
-- 다익스트라 대신에 쓰여도 더 괜찮은듯? => 다익스트라가 더 빠름(if문 덕지덕지여서)
+- 다익스트라 대신에 쓰여도 더 괜찮은듯?
 - [SPFA.md](./SPFA.md)
 
-#
+# 
 
 ## Sweeping
 2020년 2월 25일 화요일
@@ -44,7 +80,7 @@
 
 #
 
-## Parameric
+## Parametric
 2020년 2월 28일 금요일
 
 - 시간복잡도 => O(NlogN) : 파라메트릭 서치 => 탐색법 (이분탐색,삼분탐색)
@@ -162,13 +198,13 @@
 
 # 
 
-## 네트워크 플로우
+## Network_Flow
 2020년 7얼 15일 수요일
 
 - 시간 복잡도 : O(V*E^2)
 - 용량을 갖고 있는 그래프에서 마지막 정점으로 얼마나 많은 유량을 보낼 수 있는가
 - 가중치가 아닌 용량으로 나타냄으로 최단거리와는 다름
-- [Network_Flow][./Network_Flow]
+- [Network_Flow](./Network_Flow)
 
 # 
 
@@ -180,24 +216,4 @@
 - 각 유량마다 최소비용을 구할때 SPFA를 사용해 시간적 효율성을 얻음
 - [MCMF](./MCMF.md)
 
-
-이후...  
-- segment, 펜윅, lazy propagation
-- 최소 컷
-- 이분 매칭
-- Biconnected Component
-- LCA 
-- -----------------------
-- 아호 코라식
-- 조합론 등 수학
-- 고속 퓨리에 변환, 중국인의 나머지 정리, 모듈러 연산
-- 라빈카프
-- 병렬 이분 탐색
-- 디닉 알고리즘
-- 카라츠바 알고리즘
-- 머지소트 트리
-- 컨백스 헐 트릭
-- 허프만 코딩
-- 고속 역 제곱근 알고리즘
-- 브레젠험 라인 알고리즘
-
+ 
