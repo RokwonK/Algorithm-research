@@ -16,7 +16,7 @@
 - [Indexed tree(Segment, 펜윅), lazy propagation]()
 - [Bipartite Matching(이분매칭)]()
 - [Biconnected Component]()
-- [LCA]() 
+- [LCA]()
 
 </hr>
 
@@ -37,6 +37,7 @@
 - [Convex_Hull](#Convex_Hull)
 - [Network_Flow](#Network_Flow)
 - [MCMF](#MCMF)
+- [Rotating_calipers](#Rotating_calipers)
 
 
 ### 공부해야할 것들
@@ -216,4 +217,13 @@
 - 각 유량마다 최소비용을 구할때 SPFA를 사용해 시간적 효율성을 얻음
 - [MCMF](./MCMF.md)
 
- 
+# 
+
+## Rotating_calipers
+2020년 7월 17일 금요일
+
+- 시간 복잡도 : Convex Hull + O(N)
+- 거리가 가장 먼 두 점을 구하는 것
+- 물건의 길이를 재는 캘리퍼스를 회전하면서 다각형에서 가장 먼 점을 구하는 테크틱
+- [Rotating_calipers](./Rotating_calipers)
+
