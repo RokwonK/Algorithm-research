@@ -39,6 +39,7 @@
 - [MCMF](#MCMF)
 - [Rotating_calipers](#Rotating_calipers)
 - [Segment_tree](#Segment_tree)
+- [Lazy_Propagation](#Lazy_Propagation)
 
 
 ### 공부해야할 것들
@@ -237,3 +238,11 @@
 - 배열을 여러 구간으로 나누어서 관리하는 것
 - 공간이 2~4배이상 더 필요하지만 구간연산을 logN만에 처리할 수 있음
 - [Segment_tree](./Segment_tree)
+
+## Lazy_Propagation
+2020년 7월 28일 화요일
+
+- 시간복잡도 : O( NlogN ), 수정 => O(logN)
+- Segment와 함계 쓰이는 알고리즘
+- 원소 하나를 바꾸는 것이 아닌 하나의 구간을 바꿔야 할때 시간적 효율성이 좋음
+- [Lazy_Propagation](./Lazy_Propagation)
