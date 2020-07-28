@@ -228,7 +228,7 @@
 - 시간 복잡도 : Convex Hull + O(N)
 - 거리가 가장 먼 두 점을 구하는 것
 - 물건의 길이를 재는 캘리퍼스를 회전하면서 다각형에서 가장 먼 점을 구하는 테크틱
-- [Rotating_calipers](./Rotating_calipers)
+- [Rotating_calipers](./Rotating_calipers.md)
 
 # 
 
@@ -238,7 +238,7 @@
 - 시간복잡도 : O( NlogN )
 - 배열을 여러 구간으로 나누어서 관리하는 것
 - 공간이 2~4배이상 더 필요하지만 구간연산을 logN만에 처리할 수 있음
-- [Segment_tree](./Segment_tree)
+- [Segment_tree](./Segment_tree.md)
 
 # 
 
@@ -248,7 +248,7 @@
 - 시간복잡도 : O( NlogN ), 수정 => O(logN)
 - Segment와 함계 쓰이는 알고리즘
 - 원소 하나를 바꾸는 것이 아닌 하나의 구간을 바꿔야 할때 시간적 효율성이 좋음
-- [Lazy_Propagation](./Lazy_Propagation)
+- [Lazy_Propagation](./Lazy_Propagation.md)
 
 # 
 
@@ -258,7 +258,7 @@
 - 시간복잡도 : O( NlogNlogN ), 공간복잡도 : O(NlogN)
 - Segment와 Merge Sort를 합쳐서 사용
 - 구간에서 원하는 값을 찾기 위해 사용
-- [Merge_Sort_Tree](./Merge_Sort_Tree)
+- [Merge_Sort_Tree](./Merge_Sort_Tree.md)
 
 # 
 
