@@ -13,7 +13,6 @@
 - [Greedy]()
 - [Topological_Sort]()
 - [DFS_BFS]()
-- [Indexed tree(Segment, 펜윅), lazy propagation]()
 - [Bipartite Matching(이분매칭)]()
 - [Biconnected Component]()
 - [LCA]()
@@ -41,6 +40,8 @@
 - [Segment_tree](#Segment_tree)
 - [Lazy_Propagation](#Lazy_Propagation)
 - [Merge_Sort_Tree](#Merge_Sort_Tree)
+- [Sqrt_Decompositon](#Sqrt_Decompositon)
+- [Mo's_Algorithm](#Mo's_Algorithm)
 
 
 ### 공부해야할 것들
@@ -51,7 +52,6 @@
 - 고속 퓨리에 변환, 중국인의 나머지 정리, 모듈러 연산
 - 병렬 이분 탐색
 - 카라츠바 알고리즘
-- 머지소트 트리
 - 컨백스 헐 트릭
 - Splay tree
 - 허프만 코딩
@@ -262,3 +262,17 @@
 
 # 
 
+## Sqrt_Decompositon
+2020년 7월 29일 수요일
+- 시간복잡도 : O(N√N)
+- 구간에 대한 질의를 √N만에 처리 할 수 있다.
+- [Sqrt_Decompositon](./Sqrt_Decompositon.md)
+
+# 
+
+## Mo's_Algorithm
+2020년 7월 29일 수요일
+- 시간복잡도 : O((N+Q)√N)
+- update가 없을 때 질의를 처리해주는 알고리즘
+- update가 없음(순서상관 없음)이므로 오프라인 쿼리를 통해 처리
+- [Mo's_Algorithm](./Mos_Algorithm.md)
