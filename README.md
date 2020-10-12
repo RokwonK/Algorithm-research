@@ -8,14 +8,8 @@
 ## 목차
 
 ### 아직 정리x
-- [Union_Find]()
-- [Minimum_Spanning_Tree]()
-- [Greedy]()
-- [Topological_Sort]()
-- [DFS_BFS]()
 - [Bipartite Matching(이분매칭)]()
 - [Biconnected Component]()
-- [LCA]()
 
 </hr>
 
@@ -167,7 +161,7 @@
 2020년 7월 6일 금요일
 
 - DP를 이용한 시간 복잡도 : O(N^2)
-- TSP(외판원 순회문제)에 일전 조건(순증가 순감소)을 건 방식
+- TSP(외판원 순회문제)에 일정 조건(순증가 순감소)을 건 방식
 - 조건을 검으로써 다항식 시간내에 풀 수 잇음
 - [Bitonic_tour.md](./Bitonic_tour.md)
 
